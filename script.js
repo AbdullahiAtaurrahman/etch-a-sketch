@@ -19,10 +19,10 @@ for (let i = 0; i < boxCount * boxCount; i++) {
         box.style.backgroundColor = generateRandom();
     });
     box.addEventListener('mouseleave', () => {
-        box.style.backgroundColor = generateRandom();
+        box.style.backgroundColor = "#0b0b0eff";
     });
     box.addEventListener('click', () => {
-        box.style.backgroundColor = "#0b0b0eff";
+        box.style.backgroundColor = generateRandom();
     });
 
 
