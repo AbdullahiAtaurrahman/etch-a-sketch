@@ -6,3 +6,26 @@
     margin: 0;
     font-family: 'Roboto', arial, sans-serif;
 }
+
+body {
+    background-color: rgb(23, 129, 223);
+}
+
+.container {
+    display: grid;
+    gap: 4px;
+    aspect-ratio: 1/1;
+    width: 60vw;
+    height: auto;
+    margin: auto 20vw;
+    margin-top: 64px;
+}
+
+.box {
+    /* margin: 4px; */
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
