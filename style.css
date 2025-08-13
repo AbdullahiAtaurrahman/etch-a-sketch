@@ -13,19 +13,19 @@ body {
 
 .container {
     display: grid;
-    gap: 4px;
     aspect-ratio: 1/1;
-    width: 60vw;
+    width: 80vw;
     height: auto;
-    margin: auto 20vw;
+    margin: auto 10vw;
     margin-top: 64px;
+    border: 2px solid black;
+    padding: 5px;
 }
 
 .box {
-    /* margin: 4px; */
     border: 1px solid black;
     border-radius: 4px;
     width: 100%;
     height: auto;
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }

@@ -2,13 +2,18 @@ const container = document.querySelector('.container');
 
 const colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
 
-const boxCount = 9; // Number of boxes per row and column
+let boxCount;
+do {
+    boxCount = prompt("Enter no of divs, but  should be less than 100: "); // Number of boxes per row and column
+} while (boxCount >= 100 || isNaN(boxCount));
 
-// Set grid template dynamically
+// if (boxCount > 100) {
+//     boxCount
+// } else {
 container.style.gridTemplateColumns = `repeat(${boxCount}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${boxCount}, 1fr)`;
+container.style.gap = `2px`;
 
-// Create boxes
 for (let i = 0; i < boxCount * boxCount; i++) {
     const box = document.createElement("div");
     box.style.backgroundColor = "#0b0b0eff";
@@ -18,20 +23,25 @@ for (let i = 0; i < boxCount * boxCount; i++) {
     box.addEventListener('mouseenter', () => {
         box.style.backgroundColor = generateRandom();
     });
+
     box.addEventListener('mouseleave', () => {
         box.style.backgroundColor = "#0b0b0eff";
     });
+
     box.addEventListener('click', () => {
         box.style.backgroundColor = generateRandom();
     });
 
-
-}
+};
 
 function generateRandom() {
+
     let randomColor = "#";
+
     for (let j = 0; j < 6; j++) {
         randomColor += colors[Math.floor(Math.random() * colors.length)]
-    }
+    };
+
     return randomColor;
-};
+}
+// };
